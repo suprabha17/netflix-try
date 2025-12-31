@@ -18,6 +18,9 @@ If you are developing a production application, we recommend using TypeScript wi
 ## netflix try
 Create vite app
 configured tailwind
+header
+login form
+sign up form
 
 ## features
 - Login/signUp page
