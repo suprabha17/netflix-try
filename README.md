@@ -31,6 +31,16 @@ use ref hook
 setup firebase
 deployed app on firebase
 Implemented sign In user API
+Created Redux store with userSlice
+Implemented signout feature
+update profile
+fetch movie from TMD
+bug fix: redirect user if the user not logged in tthen it redirect to login page.
+bug: sign up user display name
+clean up useEffect with unsubcribed to the onAuthStateChanged callback
+Add hardcoded values to the constant files
+
+
 
 ## features
 - Login/signUp page
