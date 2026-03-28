@@ -39,6 +39,11 @@ bug fix: redirect user if the user not logged in tthen it redirect to login page
 bug: sign up user display name
 clean up useEffect with unsubcribed to the onAuthStateChanged callback
 Add hardcoded values to the constant files
+we created custom hook
+Update store with movie and video data with movie sclice
+created hero section with embeded trailer as background
+using tailwind for css
+
 
 
 

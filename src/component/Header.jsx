@@ -14,7 +14,6 @@ const Header=()=>{
 // Give me this piece of data from Redux, and re-render me when it changes.
 const user = useSelector( store =>store.user);
 const dispatch = useDispatch();
-console.log(user);
 
 
     const navigate =useNavigate();

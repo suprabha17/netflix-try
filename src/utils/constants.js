@@ -13,3 +13,5 @@ export const API_option ={
         
     }
 }
+
+export const baseImageUrl = "https://image.tmdb.org/t/p/w500/";
