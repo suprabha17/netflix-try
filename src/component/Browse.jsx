@@ -4,13 +4,18 @@ import Header from "./Header";
 // import { useDispatch} from "react-redux";
 // import { addNowPlayingNovies } from "../utils/moviewSlice.js";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies.js";
+import MainContainer from "./MainContainer.jsx";
+import SecondaryContainer from "./SecondaryContainer.jsx";
 
 const Browse=() => {
 
-   useNowPlayingMovies()
+   useNowPlayingMovies();
+   
     return (
     <div>
     <Header/>
+    <MainContainer/>
+    <SecondaryContainer/>
     </div>)
 }
 export default Browse;
