@@ -7,10 +7,11 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 // import { logo } from "../utils/constants";
 import { addUser, removeUser } from "../utils/userSlice";
-import {logo,avtarImage} from "../utils/constants";
+import {logo,avtarImage,supported_languages} from "../utils/constants";
+import {toggleGptSearch} from "../utils/GptSlice";
 
 const Header=()=>{
-
+const searchState = useSelector(store => store.gpt?.showgptSearch);
 // Give me this piece of data from Redux, and re-render me when it changes.
 const user = useSelector( store =>store.user);
 const dispatch = useDispatch();
@@ -49,10 +50,21 @@ const dispatch = useDispatch();
         }
 
         },[]);
+
+        const handleGptSearch=()=>{
+            dispatch(toggleGptSearch());
+            console.log("gpt search toggled: ",searchState);
+        }
     return(
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent z-10 flex justify-between items-center p-4">
         <img className="w-44" src={logo} alt="logo" />
         {user && (<div className="flex items-center">
+            <select className="py-2 px-4 m-2 bg-red-700 text-white rounded" name="Select Lang" id="">
+               {supported_languages.map(lang=> <option key={lang.identifier} value={lang.identifier}>
+                    {lang.name}
+                </option>)}
+            </select>
+            <button onClick={handleGptSearch} className="py-2 px-4 m-2 bg-[oklch(45.3%_0.124_130.933)] text-white rounded">Smart search</button>
             <img src={avtarImage} alt="user Icon" />
             <button onClick={handleSignOut} className="ml-4 bg-red-700 text-white px-4 py-2 rounded">Sign Out</button>
         </div>)}

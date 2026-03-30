@@ -5,21 +5,36 @@ import Header from "./Header";
 // import { addNowPlayingNovies } from "../utils/moviewSlice.js";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies.js";
 import MainContainer from "./MainContainer.jsx";
+import { useSelector } from "react-redux";
 import SecondaryContainer from "./SecondaryContainer.jsx";
 import usePopularMovies from "../hooks/usePopularMovies.js";
 import useUpcomingMovies from "../hooks/useUpcomingMovies.js";
+import GptSearchGptSearch from "./GptSearch.jsx";
+import GptMovieSuggesion from "./GptMovieSuggesion.jsx";
 
-const Browse=() => {
+const Browse = () => {
+  const searchState = useSelector((store) => store.gpt?.showgptSearch);
 
-   useNowPlayingMovies();
-   usePopularMovies();
-   useUpcomingMovies();
+  console.log("searchState: ",searchState)
 
-    return (
+  useNowPlayingMovies();
+  usePopularMovies();
+  useUpcomingMovies();
+
+  return (
     <div>
-    <Header/>
-    <MainContainer/>
-    <SecondaryContainer/>
-    </div>)
-}
+      <Header />
+      {searchState ? (
+        <><GptSearchGptSearch />
+        <GptMovieSuggesion/></>
+
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
+    </div>
+  );
+};
 export default Browse;

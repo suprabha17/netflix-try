@@ -15,3 +15,4 @@ export const API_option ={
 }
 
 export const baseImageUrl = "https://image.tmdb.org/t/p/w500/";
+export const supported_languages = [{ identifier: "en", name: "English" }, { identifier: "hi", name: "Hindi" }, { identifier: "es", name: "Spanish" }, { identifier: "fr", name: "French" }, { identifier: "de", name: "German" }];

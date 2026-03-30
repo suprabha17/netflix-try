@@ -43,6 +43,7 @@ we created custom hook
 Update store with movie and video data with movie sclice
 created hero section with embeded trailer as background
 using tailwind for css
+Added search button and GPT search page
 
 
 
