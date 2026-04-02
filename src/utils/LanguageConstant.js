@@ -3,19 +3,19 @@ const lang={
         search:"Search",
         gptSearchHolder:"What would you like to watch today?"
     },
-    hindi:{
+    hi:{
         search:"खोज",
         gptSearchHolder:"आप आज क्या देखना चाहेंगे?"
     },
-    spanish:{
+    es:{
         search:"Buscar",
         gptSearchHolder:"¿Qué te gustaría ver hoy?"
     },
-    french:{
+    fr:{
         search:"Rechercher",
         gptSearchHolder:"Qu'aimeriez-vous regarder aujourd'hui?"
     },
-    german:{
+    de:{
         search:"Suchen",
         gptSearchHolder:"Was möchten Sie heute sehen?"
     }
